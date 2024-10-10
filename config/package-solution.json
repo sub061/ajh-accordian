@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "ajh-webpart-client-side-solution",
+    "id": "75285893-8ede-478b-b72d-828d8b0ef5fd",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "ajh-webpart description"
+      },
+      "longDescription": {
+        "default": "ajh-webpart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "ajh-webpart Feature",
+        "description": "The feature that activates elements of the ajh-webpart solution.",
+        "id": "91ec47bc-7c86-4256-a349-b1627f999ed7",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/ajh-webpart.sppkg"
+  }
+}

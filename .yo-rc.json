@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.16.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "ajh-webpart",
+    "libraryId": "75285893-8ede-478b-b72d-828d8b0ef5fd",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "ajh-webpart",
+    "solutionShortDescription": "ajh-webpart description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
