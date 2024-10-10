@@ -61,6 +61,14 @@
 }
 .que_with_ans p {
   font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   margin: 0;
   padding: 0;
+}
+.que_with_ans p * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 16px;
+}
+.que_with_ans p strong {
+  font-weight: bold !important;
 }/*# sourceMappingURL=AccordionWithQuestion.module.css.map */
