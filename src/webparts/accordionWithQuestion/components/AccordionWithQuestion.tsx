@@ -38,7 +38,14 @@ export default class AccordionWithQuestion extends React.Component<
           {accData.map((acc, index) => (
             <div id={"id-" + (index + 1)} className="list">
               <a>Q. {acc.Question} </a>
-              <p className="ans">{acc.Answer} </p>
+              {/* <p className="ans">{acc.Answer} </p> */}
+              {/* <p className="ans">
+                dangerouslySetInnerHTML={{ __html: acc.Answer }}
+              </p> */}
+              <p
+                className="ans"
+                dangerouslySetInnerHTML={{ __html: acc.Answer }}
+              />
             </div>
           ))}
         </div>

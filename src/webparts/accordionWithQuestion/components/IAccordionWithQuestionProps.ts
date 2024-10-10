@@ -4,9 +4,10 @@ export interface IAccordionWithQuestionProps {
 }
 
 export interface IListContent{
-  Id: string;
+   [key: string]: any; // Add this index signature
   Question: string;
   Answer: string;
+  Position: string;
 }
 
 export interface IMainlist{

@@ -17,6 +17,7 @@ import * as strings from 'AccordionWithQuestionWebPartStrings';
 import AccordionWithQuestion from './components/AccordionWithQuestion';
 import { IAccordionWithQuestionProps } from './components/IAccordionWithQuestionProps';
 
+
 export interface IAccordionWithQuestionWebPartProps {
   description: string;
 }
@@ -52,15 +53,25 @@ export default class AccordionWithQuestionWebPart extends BaseClientSideWebPart<
    
   }
 
+// Sorting function
+private sortByColumn(items: IListContent[], columnName: string): IListContent[] {
+  return items.sort((a, b) => {
+    if (a[columnName] < b[columnName]) return -1;
+    if (a[columnName] > b[columnName]) return 1;
+    return 0;
+  });
+}
+
   public async getData(): Promise<IListContent[]> {
-    const requestUrl = `${this.context.pageContext.web.absoluteUrl}/_api/web/Lists/GetByTitle('AJH-Acc')/Items`;
+    const requestUrl = `${this.context.pageContext.web.absoluteUrl}/_api/web/Lists/GetByTitle('${this.properties.description}')/Items`;
     const response: SPHttpClientResponse = await this.context.spHttpClient.get(
       requestUrl,
       SPHttpClient.configurations.v1
     );
     const data = await response.json();
     console.log("Sub Goal --->", data.value);
-    return data.value;
+     var sortitems = this.sortByColumn(data.value, 'Position');
+    return sortitems;
   }
 
 
