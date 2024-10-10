@@ -1,5 +1,5 @@
 import * as React from "react";
-//import styles from "./AccordionWithQuestion.module.scss";
+import styles from "./AccordionWithQuestion.module.scss";
 import type { IAccordionWithQuestionProps } from "./IAccordionWithQuestionProps";
 //import { escape } from "@microsoft/sp-lodash-subset";
 import { type IListContent } from "./IAccordionWithQuestionProps";
@@ -25,18 +25,21 @@ export default class AccordionWithQuestion extends React.Component<
 
     return (
       <section>
-        {accData.map((acc) => (
-          <div>Question = {acc.Question}</div>
+        <span className={`${styles.accordionWithQuestion}`}></span>
+        <div className="all_que_list">
+        {accData.map((acc,index) => (
+            <a><span>{index+1}</span>: {acc.Question}</a>
         ))}
-
-        <div>
-          {accData.map((acc) => (
-            <div>
-              <span>Question = {acc.Question} </span>
-              <span>Answer = {acc.Answer} </span>
-            </div>
-          ))}
         </div>
+
+        <div className="que_with_ans">
+          {accData.map((acc) => (
+              <div className="list">
+              <a>Q. {acc.Question} </a>
+              <p className="ans">{acc.Answer} </p>
+              </div>
+          ))}
+            </div>
       </section>
     );
   }

@@ -1,16 +1,9 @@
-/*
-  Your use of the content in the files referenced here is subject to the terms of the license at http://aka.ms/fabric-assets-license
-*/
 .accordionWithQuestion {
   overflow: hidden;
   padding: 1em;
   color: "[theme:bodyText, default: #323130]";
   color: var(--bodyText);
 }
-.accordionWithQuestion.teams {
-  font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
-}
-
 .welcome {
   text-align: center;
 }
@@ -29,4 +22,44 @@
   text-decoration: underline;
   color: "[theme:linkHovered, default: #014446]";
   color: var(--linkHovered);
+}
+
+.all_que_list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+.all_que_list a {
+  text-decoration: underline;
+  color: rgb(0, 0, 238);
+  font-size: 16px;
+  cursor: pointer;
+}
+.all_que_list a:hover {
+  color: rgb(85, 26, 139);
+}
+.all_que_list a:active {
+  color: #0a4891;
+}
+
+.que_with_ans .list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.que_with_ans a {
+  text-decoration: none;
+  color: rgb(10, 72, 145);
+  font-size: 16px;
+  cursor: pointer;
+}
+.que_with_ans a:hover {
+  text-decoration: underline;
+}
+.que_with_ans p {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
 }/*# sourceMappingURL=AccordionWithQuestion.module.css.map */
