@@ -27,19 +27,21 @@ export default class AccordionWithQuestion extends React.Component<
       <section>
         <span className={`${styles.accordionWithQuestion}`}></span>
         <div className="all_que_list">
-        {accData.map((acc,index) => (
-            <a><span>{index+1}</span>: {acc.Question}</a>
-        ))}
+          {accData.map((acc, index) => (
+            <a href={"#id-" + (index + 1)}>
+              <span>{index + 1}</span>: {acc.Question}
+            </a>
+          ))}
         </div>
 
         <div className="que_with_ans">
-          {accData.map((acc) => (
-              <div className="list">
+          {accData.map((acc, index) => (
+            <div id={"id-" + (index + 1)} className="list">
               <a>Q. {acc.Question} </a>
               <p className="ans">{acc.Answer} </p>
-              </div>
-          ))}
             </div>
+          ))}
+        </div>
       </section>
     );
   }
